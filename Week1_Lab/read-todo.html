@@ -8,9 +8,21 @@
 </head>
 <body>
     <script>
-        fetch('todo.JSON')
-        .then(response=>response.json())
-        .then(data=>console.log(data));
+        var request = 'https://localhost:3000/todo'
+        console.log(request)
+        fetch(request).then((response) => {
+            return response.json();
+            }).then((data) => {
+            // Work with JSON data here
+                console.log(data);
+            }).catch((err) => {
+            // Do something for an error here
+            console.log("ERROR")
+            });
+
     </script>
+    <div ID="container">
+
+    </div>
 </body>
 </html>
